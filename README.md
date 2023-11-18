@@ -1,19 +1,16 @@
 ## 環境準備
 - npm 
+    [Macの場合]url(https://zenn.dev/uchitaka/articles/821f979139bdf9#%E5%B0%8E%E2%BC%8A%EF%BC%88mac%E3%81%AE%E5%A0%B4%E5%90%88%EF%BC%89)
+    [Windowsの場合]url(https://zenn.dev/uchitaka/articles/821f979139bdf9#%E5%B0%8E%E2%BC%8A%EF%BC%88windows%E3%81%AE%E5%A0%B4%E5%90%88%EF%BC%89)
+
 - docker
+  1. dockerhubのアカウント作成
+      https://hub.docker.com/
 
-### npmのインストール（参考）
+  2. dockerのインストール 
+    （Macの場合）https://zenn.dev/imasaka0909/articles/e984e9e69c43cf 
+    （Windowsの場合）https://www.kagoya.jp/howto/cloud/container/wsl2_docker/ 
 
-### dockerのインストール（参考）
-1. dockerhubのアカウント作成
-    https://hub.docker.com/
-
-2. dockerのインストール
-（Macの場合）
-https://zenn.dev/imasaka0909/articles/e984e9e69c43cf
-
-（Windowsの場合）※ WSL2でインストールするやり方
-https://www.kagoya.jp/howto/cloud/container/wsl2_docker/
 
 ## API起動
 sample-auth-project直下にいる状態で下記コマンドを実施
