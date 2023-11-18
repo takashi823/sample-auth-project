@@ -1,12 +1,13 @@
-import { useState, FormEvent } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useState, FormEvent } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 export const Login = () => {
   const [user_id, setUser_Id] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -19,18 +20,19 @@ export const Login = () => {
     .then((response) => {
 
       // ここでユーザー情報をローカルストレージに保存します
-      localStorage.setItem('user_id', response.data.user_id);
-      alert('ログイン成功！');
-      navigate("/");
+      localStorage.setItem("user_id", response.data.user_id);
+      localStorage.setItem("token", response.data.token);
+      alert("ログイン成功！");
+      navigate("/profile");
     })
     .catch((error) => {
       console.error(error);
-      setError('ログインに失敗しました。');
+      setError("ログインに失敗しました。");
     });
   };
 
   return (
-    <div className='Login'>
+    <div className="Login">
         <h1>ログイン</h1>
         <form onSubmit={handleSubmit}>
         <input
@@ -47,7 +49,7 @@ export const Login = () => {
             placeholder="パスワード"
             required
         />
-        {error && <div style={{ color: 'red' }}>{error}</div>}
+        {error && <div style={{ color: "red" }}>{error}</div>}
         <button type="submit">ログイン</button>
         </form>
     </div>

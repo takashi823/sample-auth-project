@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Profile.css";
 
 // ユーザー情報を表すインターフェイスを定義
 interface User {
@@ -11,14 +12,14 @@ interface User {
 
 const Profile: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string>("");
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserProfile = async () => {
-      const user_id = localStorage.getItem('user_id');
+      const user_id = localStorage.getItem("user_id");
       if (!user_id) {
-        navigate('/login');
+        navigate("/login");
         return;
       }
   
@@ -29,12 +30,12 @@ const Profile: React.FC = () => {
         
         // ここでエラーの型チェックを行います
         if (axios.isAxiosError(err)) {
-          const errorMsg = err.response?.data?.message || 'ユーザー情報の取得に失敗しました。';
+          const errorMsg = err.response?.data?.message || "ユーザー情報の取得に失敗しました。";
           setError(errorMsg);
         } else {
-          setError('An unexpected error occurred.');
+          setError("An unexpected error occurred.");
         }
-        console.error('エラー発生', err);
+        console.error("エラー発生", err);
       }
     };
   
@@ -44,12 +45,11 @@ const Profile: React.FC = () => {
 
   return (
     <div className="user-profile">
-      <h1>ユーザープロフィール</h1>
+      <h1>プロフィール</h1>
       {user && (
         <div>
           <p>ユーザーID: {user.user_id}</p>
           <p>ニックネーム: {user.nickname}</p>
-          <p>コメント: {user.comment}</p>
         </div>
       )}
     </div>

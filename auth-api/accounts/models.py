@@ -11,7 +11,6 @@ class User(models.Model):
     
     def __str__(self):
         return self.user_id
-    
 
     
 def in_30_days():
@@ -38,6 +37,7 @@ class AccessToken(models.Model):
             AccessToken.objects.get(user=user).delete()
 
         # トークン作成（UserID + Password + システム日付のハッシュ値とする）
+        # 本来は、JWTのトークン生成を行います。
         dt = timezone.now()
         str = user.user_id + user.password + dt.strftime('%Y%m%d%H%M%S%f')
         hash = hashlib.sha1(str.encode('utf-8')).hexdigest()

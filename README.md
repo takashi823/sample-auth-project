@@ -18,11 +18,26 @@ sample-auth-project直下にいる状態で下記コマンドを実施
 cd auth-api 
 docker-compose up -d 
 ```
- 
+
+# front
+
 ## frontの起動 
+
 sample-auth-project直下にいる状態で下記コマンドを実施 
+
 ```
 cd front 
 npm ci 
 npm start 
 ```
+
+## インストールしてるパッケージ
+
+```
+npm install axios      
+npm install react-router-dom  
+npm install --save-dev @types/react-router-dom
+```
+
+
+
