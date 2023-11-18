@@ -1,28 +1,28 @@
 ## 環境準備
-- npm 
-    [Macの場合]url(https://zenn.dev/uchitaka/articles/821f979139bdf9#%E5%B0%8E%E2%BC%8A%EF%BC%88mac%E3%81%AE%E5%A0%B4%E5%90%88%EF%BC%89)
-    [Windowsの場合]url(https://zenn.dev/uchitaka/articles/821f979139bdf9#%E5%B0%8E%E2%BC%8A%EF%BC%88windows%E3%81%AE%E5%A0%B4%E5%90%88%EF%BC%89)
+- npm  
+    [Macの場合](https://zenn.dev/uchitaka/articles/821f979139bdf9#%E5%B0%8E%E2%BC%8A%EF%BC%88mac%E3%81%AE%E5%A0%B4%E5%90%88%EF%BC%89)    
+    [Windowsの場合](https://zenn.dev/uchitaka/articles/821f979139bdf9#%E5%B0%8E%E2%BC%8A%EF%BC%88windows%E3%81%AE%E5%A0%B4%E5%90%88%EF%BC%89)
 
-- docker
-  1. dockerhubのアカウント作成
-      https://hub.docker.com/
+- docker 
+  * dockerhubのアカウント作成  
+      https://hub.docker.com/ 
+ 
+  * dockerのインストール  
+     [Macの場合](https://zenn.dev/imasaka0909/articles/e984e9e69c43cf)  
+     [Windowsの場合](https://www.kagoya.jp/howto/cloud/container/wsl2_docker/) 
 
-  2. dockerのインストール 
-    （Macの場合）https://zenn.dev/imasaka0909/articles/e984e9e69c43cf 
-    （Windowsの場合）https://www.kagoya.jp/howto/cloud/container/wsl2_docker/ 
-
-
-## API起動
+ 
+## APIの起動 
 sample-auth-project直下にいる状態で下記コマンドを実施
 ```
-cd auth-api
-docker-compose up -d
+cd auth-api 
+docker-compose up -d 
 ```
-
-## react起動
-sample-auth-project直下にいる状態で下記コマンドを実施
+ 
+## frontの起動 
+sample-auth-project直下にいる状態で下記コマンドを実施 
 ```
-cd front
-npm ci
-npm start
+cd front 
+npm ci 
+npm start 
 ```
